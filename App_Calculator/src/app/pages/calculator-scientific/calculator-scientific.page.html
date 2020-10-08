@@ -1,0 +1,72 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>
+			Wissenschaftlicher Rechner
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+	<div class="calculator">
+
+		<input type="text" class="calculator-screen" value="0" disabled [(ngModel)]="expression">
+
+		<div class="calculator-keys">
+			<!-- row 1-->
+			<button type="button" class="operator-text" (click)="add('PI')" value="π">π</button>
+			<button type="button" class="operator-text" (click)="add('E')" value="e">e</button>
+			<button type="button" class="operator-text" (click)="add('n!')" value="n!">!</button>
+
+			<button type="button" class="operator" (click)="add('+')">+</button>
+			<button type="button" class="operator" (click)="add('-')">-</button>
+			<button type="button" class="operator" (click)="add('*')">&times;</button>
+			<button type="button" class="operator" (click)="add('/')">&divide;</button>
+
+			<!-- row 2-->
+			<button type="button" class="operator-text"(click)="add('(')"  value="(">(</button>
+			<button type="button" class="operator-text" (click)="add(')')" value=")">)</button>
+			<button type="button" class="operator-text" (click)="add('n!')"value="n!">!</button>
+
+			<button type="button" class="operator" (click)="add(7)">7</button>
+			<button type="button" class="operator" (click)="add(8)">8</button>
+			<button type="button" class="operator" (click)="add(9)">9</button>
+
+			<!-- row 3-->
+			<button type="button" class="operator-text" (click)="addFunction('sin')">sin</button>
+			<button type="button" class="operator-text" (click)="addFunction('cos')">cos</button>
+			<button type="button" class="operator-text" (click)="addFunction('ln')">ln</button>
+
+			<button type="button" class="operator" (click)="add(4)">4</button>
+			<button type="button" class="operator" (click)="add(5)">5</button>
+			<button type="button" class="operator" (click)="add(6)">6</button>
+
+			<!-- row 4-->
+			<button type="button" class="operator-text" (click)="addFunction('asin')">asin</button>
+			<button type="button" class="operator-text" (click)="addFunction('acos')">acos</button>
+			<button type="button" class="operator-text" (click)="addFunction('log')">log</button>
+
+			<button type="button" class="operator" (click)="add(1)" value="1">1</button>
+			<button type="button" class="operator" (click)="add(2)" value="2">2</button>
+			<button type="button" class="operator" (click)="add(3)" value="3">3</button>
+
+			<!-- row 4-->
+			<button type="button" class="operator-text" (click)="addFunction('atan')">atan</button>
+			<button type="button" class="operator-text" (click)="addFunction('tan')">tan</button>
+			<button type="button" class="operator-text" (click)="addFunction('sqrroot')">√</button>
+
+			<button type="button" class="operator" (click)="add(0)">0</button>
+			<button type="button" class="decimal" (click)="add('.')">.</button>
+			<button type="button" class="all-clear" (click)="clear()">AC</button>
+			<button type="button" class="operator" (click)="evaluate()" value="=">=</button>
+
+			<!-- row 4-->
+			<button type="button" class="equal-sign" (click)="calculate()" value="=">=</button>
+
+
+		</div>
+	</div>
+</ion-content>
